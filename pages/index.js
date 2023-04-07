@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { list } from 'postcss'
+import Head from 'next/head';
+import MainNav from '@/components/MainNav';
+
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -12,35 +12,8 @@ export default function Home() {
         <link rel="icon" href="/realfast_logo.png" />
       </Head>
       <main>
-        <nav className={style.navbar}>
-          <ul className={styles.navSection}>
-            <li className={styles.brandSection}>
-              <span className={styles.brandName}>Real Fast</span>
-              <image width={38} height {38} src='/realfast_logo.png'/>
-            </li>
-            <li>
-              <link href='#'>Find Jobs</link>
-            </li>
-          </ul>
-          <ul className={styles.navSection}>
-            <li>
-            <link href='#' className={styles.navText}>Sign in</link>
-            </li>
-            <li>
-            <link href='#' className={styles.navText}>Post a Job</link>
-            </li>
-          </ul>
-        </nav>
+        <MainNav/>
       </main>
     </>
   )
-}
-
-const styles = {
-  navBar:'h-[60px] flex flex-row justify-between items-center px-3 border border-gray-200 shadow-md'
-  navSection: 'flex flex-row space-x-3',
-  brandSection:'flex flex-row gap-2',
-  brandName:'font-reading text-2xl text-purple-600 font-bold',
-  navText: 'text-gray-700 hover:text-purple-600',
-  seperator:'border border-r-2'
 }
